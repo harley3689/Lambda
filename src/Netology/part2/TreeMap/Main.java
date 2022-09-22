@@ -13,7 +13,7 @@ public class Main {
         people.add(new Person("Arthur", "Conan Doyle", 71));
         people.add(new Person("Friedrich", "Schiller", 45));
         people.add(new Person("François", "Rabelais", 55));
-        Collections.sort(people, new PersonsComparator(2));
+        Collections.sort(people, new PersonsComparator(3));
         Collections.reverse(people);
         System.out.println(people);
     }
