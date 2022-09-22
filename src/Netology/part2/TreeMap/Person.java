@@ -1,22 +1,14 @@
 package Netology.part2.TreeMap;
 
-public class Person implements Comparable<Person> {
+public class Person {
     private String name;
     private String surname;
-    private String[] surnameSize;
     private int age;
-    private int size;
 
     public Person(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
-        this.surnameSize = surname.split("\\P{IsAlphabetic}+");
-        this.size = surnameSize.length;
         this.age = age;
-    }
-
-    public int getSize() {
-        return size;
     }
 
     public String getName() {
@@ -41,17 +33,6 @@ public class Person implements Comparable<Person> {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    @Override
-    public int compareTo(Person o) {
-        if(size==o.size){
-            return Integer.compare(age,o.age);
-        }else {
-            return surname.compareTo(o.surname);
-        }
-
-
     }
 
     @Override

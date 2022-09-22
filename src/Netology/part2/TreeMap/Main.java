@@ -14,9 +14,7 @@ public class Main {
         people.add(new Person("Friedrich", "Schiller", 45));
         people.add(new Person("François", "Rabelais", 55));
         Collections.sort(people, new PersonsComparator(2));
-        //Collections.reverse(people);
-        System.out.println(people);
-        Collections.sort(people);
+        Collections.reverse(people);
         System.out.println(people);
     }
 }
