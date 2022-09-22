@@ -1,6 +1,6 @@
 package Netology.part2.TreeMap;
 
-public class Person {
+public class Person implements Comparable<Person> {
     private String name;
     private String surname;
     private String[] surnameSize;
@@ -40,6 +40,17 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if(surname==o.surname){
+            return Integer.compare(age,o.age);
+        }else {
+            return surname.compareTo(o.surname);
+        }
+
+
     }
 
     @Override
