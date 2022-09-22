@@ -14,7 +14,7 @@ public class PersonsComparator implements Comparator<Person> {
         int surname1 = o1.getSurname().split("\\P{IsAlphabetic}+").length;
         int surname2 = o2.getSurname().split("\\P{IsAlphabetic}+").length;
 
-        if (Math.min(surname1,words) != (Math.min(surname2,words))) {
+        if (Math.min(surname1,words) != Math.min(surname2,words)) {
             return Integer.compare(surname1, surname2);
         } else {
             return Integer.compare(o1.getAge(), o2.getAge());
