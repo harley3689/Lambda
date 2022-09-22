@@ -3,7 +3,7 @@ package Netology.part2.TreeMap;
 import java.util.Comparator;
 
 public class PersonsComparator implements Comparator<Person> {
-    protected int words;
+    private int words;
 
     public PersonsComparator(int words) {
         this.words = words;
