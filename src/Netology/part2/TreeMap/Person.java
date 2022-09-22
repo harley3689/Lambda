@@ -5,16 +5,17 @@ public class Person implements Comparable<Person> {
     private String surname;
     private String[] surnameSize;
     private int age;
+    private int size;
 
     public Person(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
         this.surnameSize = surname.split("\\P{IsAlphabetic}+");
+        this.size = surnameSize.length;
         this.age = age;
     }
 
-    public int size() {
-        int size = surnameSize.length;
+    public int getSize() {
         return size;
     }
 
@@ -44,7 +45,7 @@ public class Person implements Comparable<Person> {
 
     @Override
     public int compareTo(Person o) {
-        if(surname==o.surname){
+        if(size==o.size){
             return Integer.compare(age,o.age);
         }else {
             return surname.compareTo(o.surname);

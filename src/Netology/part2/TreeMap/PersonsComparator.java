@@ -33,12 +33,11 @@ public class PersonsComparator implements Comparator<Person> {
     }*/
     @Override
     public int compare(Person o1, Person o2) {
-        if (o1.size() > words || o2.size() > words) {
-            return Integer.compare(o1.size(), o2.size());
-        } else if (o1.size() == o2.size()) {
+        if (o1.getSize() > words && o2.getSize() > words) {
+            return Integer.compare(o1.getSize(), o2.getSize());
+        } else {
             return Integer.compare(o1.getAge(), o2.getAge());
         }
-        return Integer.compare(o1.getAge(), o2.getAge());
     }
 
 }
