@@ -13,8 +13,7 @@ public class Main {
         people.add(new Person("Arthur", "Conan Doyle", 71));
         people.add(new Person("Friedrich", "Schiller", 18));
         people.add(new Person("François", "Rabelais", 18));
-
-
+        
         Collections.sort(people, (o1, o2) -> {
             int parts1 = o1.getSurname().split("\\P{IsAlphabetic}+").length;
             int parts2 = o2.getSurname().split("\\P{IsAlphabetic}+").length;
@@ -25,8 +24,6 @@ public class Main {
             return Integer.compare(o1.getAge(), o2.getAge());
         });
         people.forEach(System.out::println);
-
-
 
 
     }
