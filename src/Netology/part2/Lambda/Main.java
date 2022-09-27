@@ -1,8 +1,6 @@
 package Netology.part2.Lambda;
 
-import javax.sql.rowset.Predicate;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
