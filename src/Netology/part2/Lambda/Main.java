@@ -1,7 +1,6 @@
 package Netology.part2.Lambda;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
